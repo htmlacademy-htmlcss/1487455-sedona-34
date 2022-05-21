@@ -49,13 +49,65 @@
           </li>
         </ul>
       </header>
-      <section class="filter">
+      <section class="catalog-filter">
         <h2 class="visually-hidden">Фильтры поиска гостиниц</h2>
-
+        <form class="catalog=filter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Инфраструктура:</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="infrostructure" value="pool" checked>
+                  Бассейн
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="infrostructure" value="parking" checked>
+                  Парковка
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="infrostructure" value="wifi">
+                  Wi-Fi
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Тип жилья:</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="house-type" value="hotel" checked>
+                  Гостиница
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="house-type" value="motel">
+                  Мотель
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="house-type" value="Apartments">
+                  Апартаменты
+                </label>
+              </li>
+            </ul>
+          </fieldset>      
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+          
+          </fieldset>
+          <button class="button button-blue" type="submit">Применить</button>
+          <button class="button button-transparent" type="reset">Сбросить</button>
+        </form>
       </section>
       <section class="catalog">
         <h2>Найдено гостиниц: 38</h2>
-
       </section>
       <section class="newsletter">
         <h2>Подпишитесь на рассылку</h2>
