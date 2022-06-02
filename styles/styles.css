@@ -142,7 +142,7 @@ body {
 
 .newsletter-backgrounded {
   color: #fff;
-  background-image: url(../images/newsletter-background.jpg);
+  background-image: url("../images/newsletter-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
