@@ -40,6 +40,10 @@ body {
   background-color: #7DB54F;
 }
 
+.button-transparent {
+  background: none;
+}
+
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
@@ -130,6 +134,35 @@ body {
 
 .newsletter-backgrounded .newsletter-title {
   color: #fff;
+}
+
+.catalog-filter {
+  background-image: url("../images/filter-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.control-label {
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+
+.control-input {
+  color: #fff;
+}
+
+.select-control {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
 }
 
 .page-footer .phone {

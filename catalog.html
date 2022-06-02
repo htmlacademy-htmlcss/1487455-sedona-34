@@ -61,19 +61,19 @@
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control-label">
                   <input class="control-input" type="checkbox" name="infrostructure" value="pool" checked>
                   Бассейн
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control-label">
                   <input class="control-input" type="checkbox" name="infrostructure" value="parking" checked>
                   Парковка
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control-label">
                   <input class="control-input" type="checkbox" name="infrostructure" value="wifi">
                   Wi-Fi
                 </label>
@@ -84,19 +84,19 @@
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control-label">
                   <input class="control-input" type="radio" name="house-type" value="hotel" checked>
                   Гостиница
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control-label">
                   <input class="control-input" type="radio" name="house-type" value="motel">
                   Мотель
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
+                <label class="control-label">
                   <input class="control-input" type="radio" name="house-type" value="Apartments">
                   Апартаменты
                 </label>
@@ -105,6 +105,10 @@
           </fieldset>
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+            <label for="price-from-field" class="visually-hidden">от</label>
+            <input class="control-input" type="number" name="price-from" value="0" id="price-from-field">
+            <label for="price-to-field" class="visually-hidden">до</label>
+            <input class="control-input" type="number" name="price-to" value="9000" id="price-to-field">
           </fieldset>
           <button class="button button-blue" type="submit">Применить</button>
           <button class="button button-transparent" type="reset">Сбросить</button>
