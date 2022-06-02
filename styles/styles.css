@@ -40,6 +40,16 @@ body {
   background-color: #7DB54F;
 }
 
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
+}
+
+.breadcrumbs-link {
+  color: #fff;
+}
+
 .page-heading {
   font-size: 60px;
   line-height: 78px;
@@ -120,4 +130,10 @@ body {
 
 .newsletter-backgrounded .newsletter-title {
   color: #fff;
+}
+
+.page-footer .phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000;
 }
