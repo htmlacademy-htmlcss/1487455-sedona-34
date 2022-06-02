@@ -26,6 +26,7 @@ body {
   font-weight: 700;
   color: #fff;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .button-brown {
@@ -42,6 +43,7 @@ body {
 
 .button-transparent {
   background: none;
+  text-transform: none;
 }
 
 .breadcrumbs-link {
@@ -163,6 +165,17 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+}
+
+.housing-item {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.housing-item-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 .page-footer .phone {
