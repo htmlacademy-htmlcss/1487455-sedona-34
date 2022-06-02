@@ -19,3 +19,30 @@ body {
   color: #333;
   background-color: #fff;
 }
+
+.button {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-brown {
+  background-color: #756157;
+}
+
+.button-blue {
+  background-color: #82B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F;
+}
+
+.navigation-link {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
