@@ -235,8 +235,25 @@ body {
   text-transform: uppercase;
 }
 
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
+}
+
+.social-list {
+  width: 142px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .page-footer .phone {
   font-size: 40px;
   line-height: 40px;
   color: #000;
+}
+
+.designer-copyrights {
+  width: 115px;
 }
