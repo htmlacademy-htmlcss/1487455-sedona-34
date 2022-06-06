@@ -112,6 +112,29 @@ body {
   color: #000;
 }
 
+.navigation {
+  display: flex;
+  padding: 0 70px;
+}
+
+.logo {
+  width: 140px;
+  margin-right: 30px;
+}
+
+.navigation-list {
+  width: 580px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-user {
+  width: auto;
+  max-width: 310px;
+  margin-left: auto;
+}
+
 .navigation-link {
   font-size: 20px;
   font-weight: 700;
