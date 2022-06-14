@@ -79,14 +79,27 @@ body {
   text-transform: none;
 }
 
-.breadcrumbs-link {
-  font-size: 16px;
-  line-height: 21px;
-  text-decoration: none;
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
+  display: block;
+  min-width: 12px;
+  min-height: 12px;
+  margin-right: 25px;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
   color: #fff;
+}
+
+.breadcrumbs-link:last-child {
+  margin-right: 0;
 }
 
 .pagination-link {
