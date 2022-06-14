@@ -345,20 +345,29 @@ body {
 .page-footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 70px;
+  padding: 45px 70px 35px;
 }
 
 .social-list {
+  display: flex;
+  flex-wrap: wrap;
   width: 142px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.social-list-link {
+  display: block;
+  min-width: 47.33px;
+  min-height: 40px;
+}
+
 .page-footer .phone {
   font-size: 40px;
   line-height: 40px;
   color: #000;
+  text-decoration: none;
 }
 
 .designer-copyrights {
