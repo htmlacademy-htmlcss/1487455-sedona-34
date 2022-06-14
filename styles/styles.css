@@ -282,6 +282,11 @@ body {
   text-align: center;
 }
 
+.newsletter {
+  padding: 94px 200px;
+  text-align: center;
+}
+
 .newsletter-backgrounded {
   color: #fff;
   background-image: url("../images/newsletter-background.jpg");
@@ -291,6 +296,10 @@ body {
 
 .newsletter-backgrounded .newsletter-title {
   color: #fff;
+}
+
+.newsletter-form {
+  margin-top: 46px;
 }
 
 .catalog-filter {
