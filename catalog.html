@@ -116,21 +116,23 @@
           </form>
         </section>
         <section class="catalog">
-          <h2 class="heading">Найдено гостиниц: 38</h2>
-          <select class="select-control" aria-label="Сортировка">
-            <option value="popular">Сначала популярные</option>
-            <option value="cheap" selected>Сначала дешёвые</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
-          <a class="button button-light" href="#">
-            <span class="visually-hidden">Плитки</span>
-          </a>
-          <a class="button button-light" href="#">
-            <span class="visually-hidden">Слайдшоу</span>
-          </a>
-          <a class="button button-light" href="#">
-            <span class="visually-hidden">Список</span>
-          </a>
+          <div class="catalog-header">
+            <h2 class="heading">Найдено гостиниц: 38</h2>
+            <select class="select-control" aria-label="Сортировка">
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap" selected>Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+            <a class="button button-light" href="#">
+              <span class="visually-hidden">Плитки</span>
+            </a>
+            <a class="button button-light" href="#">
+              <span class="visually-hidden">Слайдшоу</span>
+            </a>
+            <a class="button button-light" href="#">
+              <span class="visually-hidden">Список</span>
+            </a>
+          </div>
           <ul class="housing-list">
             <li class="housing-item">
               <h3 class="subheading">Amara Resort & Spa</h3>
@@ -173,33 +175,35 @@
               <div class="housing-item-rating">Рейтинг: 5,0</div>
             </li>
           </ul>
-          <ul class="pagination-list">
-            <li class="pagination-item">
-              <a class="pagination-link pagination-link-ative" href="#">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">...</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">10</a>
-            </li>
-          </ul>
-          <label class="select-control-label" for="housing-quantity-field">Гостиниц на странице:</label>
-          <select class="select-control" name="housing-quantity" id="housing-quantity-field">
-            <option value="4" selected>4</option>
-            <option value="8">8</option>
-            <option value="12">12</option>
-            <option value="16">16</option>
-          </select>
+          <div class="catalog-footer">
+            <ul class="pagination-list">
+              <li class="pagination-item">
+                <a class="pagination-link pagination-link-ative" href="#">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">...</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">10</a>
+              </li>
+            </ul>
+            <label class="select-control-label" for="housing-quantity-field">Гостиниц на странице:</label>
+            <select class="select-control" name="housing-quantity" id="housing-quantity-field">
+              <option value="4" selected>4</option>
+              <option value="8">8</option>
+              <option value="12">12</option>
+              <option value="16">16</option>
+            </select>
+          </div>
         </section>
         <section class="newsletter">
           <h2 class="newsletter-title heading">Подпишитесь на рассылку</h2>
