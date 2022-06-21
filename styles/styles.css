@@ -410,8 +410,22 @@ body {
 }
 
 .housing-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  padding: 20px;
   font-size: 18px;
   line-height: 21px;
+}
+
+.housing-item-image {
+  grid-area: 1/1/2/-1;
+  object-fit: contain;
+}
+
+.housing-item-title {
+  grid-column: span 2;
+  margin: 0;
 }
 
 .housing-item-rating {
