@@ -73,6 +73,7 @@ body {
 }
 
 .button-transparent {
+  font-weight: 400;
   background: none;
   text-transform: none;
 }
@@ -93,11 +94,27 @@ body {
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
-  color: #fff;
 }
 
 .breadcrumbs-link:last-child {
   margin-right: 0;
+}
+
+.inner-header {
+  padding: 35px 70px 70px;
+  color: #fff;
+  background: url("../images/filter-background.jpg");
+  background-size: cover;
+}
+
+.inner-header .page-heading {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.inner-header .breadcrumbs {
+  margin-bottom: 40px;
 }
 
 .catalog {
@@ -376,17 +393,55 @@ body {
   margin-top: 46px;
 }
 
-.catalog-filter {
-  background-image: url("../images/filter-background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+.catalog-filter-form {
+  display: grid;
+  grid-template-columns: repeat(3, max-content) 160px;
+  column-gap: 70px;
+}
+
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.catalog-filter-group:nth-child(2n) {
+  margin-right: auto;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .catalog-filter-title {
+  padding: 0;
+  margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   color: #fff;
+}
+
+.catalog-filter-buttons {
+  align-self: end;
+}
+
+.catalog-filter-buttons .button {
+  width: 100%;
+  border: 0;
+  text-align: center;
+}
+
+.catalog-filter-buttons .button-blue {
+  margin-bottom: 20px;
+  padding: 14px 15px;
+  border-radius: 4px;
 }
 
 .control-label {

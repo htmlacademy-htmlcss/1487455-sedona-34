@@ -54,10 +54,7 @@
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
-        </header>
-        <section class="catalog-filter">
-          <h2 class="visually-hidden">Фильтры поиска гостиниц</h2>
-          <form class="catalog=filter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
@@ -111,10 +108,12 @@
               <label for="price-to-field">до</label>
               <input class="control-input" type="number" name="price-to" value="9000" id="price-to-field">
             </fieldset>
-            <button class="button button-blue" type="submit">Применить</button>
-            <button class="button button-transparent" type="reset">Сбросить</button>
+            <div class="catalog-filter-group catalog-filter-buttons">
+              <button class="button button-blue" type="submit">Применить</button>
+              <button class="button button-transparent" type="reset">Сбросить</button>
+            </div>
           </form>
-        </section>
+        </header>
         <section class="catalog">
           <div class="catalog-header">
             <h2 class="heading">Найдено гостиниц: 38</h2>
