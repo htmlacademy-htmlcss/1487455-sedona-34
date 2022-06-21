@@ -403,6 +403,12 @@ body {
   color: #333333;
 }
 
+.housing-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row: 18px;
+}
+
 .housing-item {
   font-size: 18px;
   line-height: 21px;
