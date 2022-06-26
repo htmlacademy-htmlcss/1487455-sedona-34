@@ -405,7 +405,7 @@ body {
 }
 
 .advantages-item-info p:last-child {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .advantages-item:nth-child(2n) {
@@ -438,8 +438,30 @@ body {
   order: -1;
 }
 
+.advantages-subitem::before {
+  display: block;
+  width: 75px;
+  height: 72px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.advantages-subitem-housing:before {
+  background-image: url("../images/icons/housing.svg");
+}
+.advantages-subitem-eating:before {
+  background-image: url("../images/icons/eating.svg");
+}
+.advantages-subitem-souvenir:before {
+  background-image: url("../images/icons/souvenir.svg");
+}
+
 .search-hotel {
   padding: 91px 304px 93px;
+  text-align: center;
 }
 
 .search-hotel .button {
@@ -632,12 +654,24 @@ body {
 }
 
 .social-list-link {
-  display: flex;
+  display: block;
   min-width: 47.3333px;
   min-height: 40px;
   color: #83B3D3;
-  justify-content: center;
-  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social-list-link[href*="vk.com"] {
+  background-image: url("../images/icons/vkontakte.svg");
+}
+
+.social-list-link[href*="t.me"] {
+  background-image: url("../images/icons/telegram.svg");
+}
+
+.social-list-link[href*="youtu"] {
+  background-image: url("../images/icons/youtube.svg");
 }
 
 .page-footer .phone {
@@ -648,7 +682,6 @@ body {
 }
 
 .designer-copyrights {
-  display: flex;
   width: 115px;
-  align-items: center;
+  background: url("../images/htmlacademy-logo.svg") no-repeat center center;
 }
