@@ -374,11 +374,16 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+.advantages-item .subheading {
+  color: inherit;
+}
+
 .advantages-item-big {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
+  color: #fff;
   background: none;
 }
 
@@ -412,6 +417,7 @@ body {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  color: #333;
   list-style-type: none;
 }
 
