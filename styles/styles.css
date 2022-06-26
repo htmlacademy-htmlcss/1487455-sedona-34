@@ -69,6 +69,7 @@ body {
 .button-brown:focus,
 .button-brown:hover {
   background-color: #615048;
+  outline: none;
 }
 
 .button-blue {
@@ -78,6 +79,7 @@ body {
 .button-blue:focus,
 .button-blue:hover {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .button-green {
@@ -87,9 +89,10 @@ body {
 .button-green:focus,
 .button-green:hover {
   background-color: #6C9E42;
+  outline: none;
 }
 
-.button-brown:active {
+.button:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -175,7 +178,7 @@ body {
   outline: none;
 }
 
-.button-view:hover,
+.button-view:hover
 .button-view:active,
 .button-view-current {
   border-color: #000;
@@ -620,6 +623,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  cursor: pointer;
 }
 
 .housing-list {
