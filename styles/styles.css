@@ -341,11 +341,13 @@ body {
 }
 
 .intro {
-  padding-top: 51px;
-  padding-bottom: 82px;
-  background-image: url("../images/welcome-background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  min-height: 485px;
+  padding: 51px 0;
+  box-sizing: border-box;
+  background-image: url("../images/welcome-background-bottom.svg"),
+                    url("../images/welcome-background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 428px, center top;
   text-align: center;
 }
 
