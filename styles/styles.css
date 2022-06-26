@@ -52,6 +52,8 @@ body {
 
 .button {
   display: block;
+  border: 0;
+  border-radius: 4px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -64,12 +66,31 @@ body {
   background-color: #756157;
 }
 
+.button-brown:focus,
+.button-brown:hover {
+  background-color: #615048;
+}
+
 .button-blue {
   background-color: #82B3D3;
 }
 
+.button-blue:focus,
+.button-blue:hover {
+  background-color: #68A2CA;
+}
+
 .button-green {
   background-color: #7DB54F;
+}
+
+.button-green:focus,
+.button-green:hover {
+  background-color: #6C9E42;
+}
+
+.button-brown:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-transparent {
@@ -229,10 +250,16 @@ body {
   margin-right: 30px;
 }
 
+.logo-image {
+  position: relative;
+  top: 5px;
+  display: block;
+  margin-top: -5px;
+}
+
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  width: 580px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -240,12 +267,13 @@ body {
 
 .navigation-user {
   width: auto;
-  max-width: 310px;
   margin-left: auto;
 }
 
 .navigation-link {
+  position: relative;
   display: block;
+  margin-bottom: -1px;
   padding: 20px 17px;
   font-size: 20px;
   font-weight: 700;
@@ -253,9 +281,52 @@ body {
   text-decoration: none;
 }
 
+.navigation-menu .navigation-link-current::after {
+    position: absolute;
+    left: 17px;
+    right: 17px;
+    bottom: 0;
+    display: block;
+    height: 2px;
+    background-color: black;
+    content: "";
+}
+
 .navigation-user .navigation-link {
+  display: grid;
+  align-items: center;
+  height: calc(100% + 1px);
+  padding: 11px;
+  box-sizing: border-box;
+  transform: translateY(-1px);
+}
+
+.navigation-link-icon {
+  display: block;
+}
+
+.navigation-link-content,
+.navigation-link-badge {
+  grid-area: 1/1/-1/-1;
+}
+
+.navigation-link-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 20px;
   min-height: 20px;
+  padding-bottom: 2px;
+  border-radius: 18px;
+  box-sizing: border-box;
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  letter-spacing: -0.1em;
+  text-align: center;
+  color: #fff;
+  background-color: #7DB54F;
+  transform: translate(13px, -6px);
 }
 
 .navigation-user .navigation-item:last-child {
