@@ -468,7 +468,7 @@ body {
 
 .newsletter-form {
   display: flex;
-  margin: 46px;
+  margin-top: 46px;
   border-radius: 10px;
 }
 
@@ -613,16 +613,19 @@ body {
 .social-list {
   display: flex;
   flex-wrap: wrap;
-  width: 142px;
   margin: 0;
   padding: 0;
+  align-items: center;
   list-style: none;
 }
 
 .social-list-link {
-  display: block;
-  min-width: 47.33px;
+  display: flex;
+  min-width: 47.3333px;
   min-height: 40px;
+  color: #83B3D3;
+  justify-content: center;
+  align-items: center;
 }
 
 .page-footer .phone {
@@ -633,5 +636,7 @@ body {
 }
 
 .designer-copyrights {
+  display: flex;
   width: 115px;
+  align-items: center;
 }
