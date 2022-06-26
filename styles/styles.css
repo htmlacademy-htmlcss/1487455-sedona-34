@@ -146,39 +146,64 @@ body {
 
 .catalog-header {
   display: flex;
+  align-items: center;
   margin-bottom: 56px;
 }
 
 .catalog-header .heading {
   margin-right: auto;
+  margin-bottom: 0;
 }
 
 .catalog-header .select-control {
   margin-right: 78px;
 }
 
-.catalog-header .button {
-  box-sizing: border-box;
+.button-view {
   width: 48px;
   height: 48px;
   margin-right: 8px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-.catalog-header .button:last-child {
+.button-view:focus {
+  border-color: #68A2CA;
+  outline: none;
+}
+
+.button-view:hover,
+.button-view:active,
+.button-view-current {
+  border-color: #000;
+}
+
+.button-view:last-child {
   margin-right: 0;
+}
+
+.button-view-tile {
+  background-image: url("../images/icons/tile.svg");
+}
+.button-view-slideshow {
+  background-image: url("../images/icons/slideshow.svg");
+}
+.button-view-list {
+  background-image: url("../images/icons/list.svg");
 }
 
 .catalog-footer {
   display: flex;
+  align-items: center;
   padding: 30px 0 25px;
   border-top: 1px solid #E6E6E6;
 }
 
 .catalog-footer .select-control-label {
   margin-right: 51px;
-  align-self: center;
 }
 
 .pagination-list {
@@ -196,6 +221,7 @@ body {
   width: 60px;
   height: 60px;
   padding: 11.36px 0 12.64px;
+  border-radius: 4px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -205,11 +231,19 @@ body {
   background: #82B3D3;
 }
 
+.pagination-link:focus,
+.pagination-link:hover {
+  background-color: #68A2CA;
+  outline: none;
+}
+
 .pagination-item:not(:last-child) {
   margin-right: 8px;
 }
 
-.pagination-link-ative {
+.pagination-link-current,
+.pagination-link-current:focus,
+.pagination-link-current:hover {
   color: #000;
   background-color: #F2F2F2;
 }
@@ -563,6 +597,13 @@ body {
   margin-bottom: 20px;
   padding: 14px 15px;
   border-radius: 4px;
+}
+
+.select-control {
+  padding: 12px 128px 12px 18px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  align-self: center;
 }
 
 .control-label {
