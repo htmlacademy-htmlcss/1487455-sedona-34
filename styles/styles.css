@@ -61,6 +61,7 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .button-brown {
@@ -122,6 +123,22 @@ body {
   cursor: pointer;
 }
 
+.control-select:focus,
+.control-select:hover {
+  border-color: #68A2CA;
+  outline: none;
+}
+
+.control-select:active {
+  border-color: #3F5E72;
+}
+
+.control-select:disabled {
+  border-color: rgba(0, 0, 0, 0.3);;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
 .breadcrumbs,
 .breadcrumbs-item,
 .breadcrumbs-link {
@@ -149,9 +166,11 @@ body {
 .breadcrumbs-link:focus {
   color: #fff;
 }
+
 .breadcrumbs-link:hover {
   color: rgba(255, 255, 255, 0.6);
 }
+
 .breadcrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -722,24 +741,20 @@ body {
 }
 
 .social-list-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 47.3333px;
   min-height: 40px;
   color: #83B3D3;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
-.social-list-link[href*="vk.com"] {
-  background-image: url("../images/icons/vkontakte.svg");
+.social-list-link:focus,
+.social-list-link:hover {
+  color: #68A2CA;
 }
-
-.social-list-link[href*="t.me"] {
-  background-image: url("../images/icons/telegram.svg");
-}
-
-.social-list-link[href*="youtu"] {
-  background-image: url("../images/icons/youtube.svg");
+.social-list-link:active {
+  color: rgba(104, 162, 202, 0.3);
 }
 
 .page-footer .phone {
@@ -749,7 +764,26 @@ body {
   text-decoration: none;
 }
 
+.page-footer .phone:focus,
+.page-footer .phone:hover {
+  color: #756157;
+}
+.page-footer .phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .designer-copyrights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 115px;
-  background: url("../images/htmlacademy-logo.svg") no-repeat center center;
+  color: #000;
+}
+
+.designer-copyrights:focus,
+.designer-copyrights:hover {
+  color: #756157;
+}
+.designer-copyrights:active {
+  color: rgba(117, 97, 87, 0.3);;
 }
