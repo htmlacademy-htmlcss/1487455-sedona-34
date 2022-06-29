@@ -111,7 +111,26 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-family: inherit;
-  color: #333;
+}
+
+.control-input {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #F2F2F2;
+}
+
+.control-input:focus {
+  outline: 3px solid #83B3D3;;
+}
+
+.control-input:focus,
+.control-input:hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #E6E6E6;
+}
+.control-input:active {
+  color: #000;
+  background-color: #fff;
+  outline: 2px solid #000000;;
 }
 
 .control-select {
@@ -137,7 +156,6 @@ body {
   border-color: rgba(0, 0, 0, 0.3);;
   color: rgba(0, 0, 0, 0.3);
 }
-
 
 .breadcrumbs,
 .breadcrumbs-item,
@@ -179,6 +197,34 @@ body {
   padding: 0 10px;
 }
 
+.page-heading {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+  color: #000;
+}
+
+.heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+
+.subheading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
 .inner-header {
   padding: 35px 70px 70px;
   color: #fff;
@@ -187,9 +233,7 @@ body {
 }
 
 .inner-header .page-heading {
-  margin: 0;
-  margin-bottom: 10px;
-  color: #fff;
+  color: inherit;
 }
 
 .inner-header .breadcrumbs {
@@ -306,32 +350,6 @@ body {
   background-color: #F2F2F2;
 }
 
-.page-heading {
-  font-size: 60px;
-  line-height: 78px;
-  font-weight: 700;
-  color: #000;
-}
-
-.heading {
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #000;
-}
-
-.subheading {
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  color: #000;
-}
-
 .navigation {
   display: flex;
   padding: 0 70px;
@@ -371,6 +389,14 @@ body {
   font-weight: 700;
   color: #000;
   text-decoration: none;
+}
+
+.navigation-link:focus,
+.navigation-link:hover {
+  color: #756157;
+}
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .navigation-menu .navigation-link-current::after {
@@ -596,8 +622,6 @@ body {
   padding: 20px 22px 19px;
   border: 0;
   border-radius: 10px 0 0 10px;
-  color: rgba(0, 0, 0, 0.6);
-  background-color: #F2F2F2;
   flex-grow: 1;
 }
 
@@ -607,12 +631,6 @@ body {
   border-radius: 0 10px 10px 0;
   font-size: 20px;
   line-height: 36px;
-}
-
-.catalog-filter-form,
-.catalog-filter-form .control-input,
-.catalog-filter-form .control-label {
-  color: inherit;
 }
 
 .catalog-filter-form {
