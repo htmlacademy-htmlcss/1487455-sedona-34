@@ -44,6 +44,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main {
@@ -114,6 +115,35 @@ body {
 .button-transparent:active {
   color: rgba(255,255,255,0.3);
 }
+
+.button-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  color: #000;
+}
+
+.button-close:focus,
+.button-close:hover,
+.button-close:active {
+  background: #E6E6E6;
+}
+
+.button-close:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.button-close:focus .button-icon {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.button-close:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 
 .form,
 .control-input,
@@ -195,7 +225,7 @@ body {
 }
 
 .control-select {
-  padding: 12px 128px 12px 18px;
+  padding: 12px 18px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   align-self: center;
@@ -264,6 +294,8 @@ body {
   outline: 2px solid #83B3D3;
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
 }
+
+
 
 
 .breadcrumbs,
@@ -368,7 +400,12 @@ body {
 }
 
 .catalog-header .control-select {
+  min-width: 290px;
   margin-right: 78px;
+}
+
+.catalog-footer .control-select {
+  min-width: 160px;
 }
 
 .button-view {
@@ -520,6 +557,10 @@ body {
     content: "";
 }
 
+/*
+  Решил учесть переполнение внутри badge чтобы даже при 5 цифрах все красиво было.
+  Поэтому сверстал .navigation-link на гридах
+*/
 .navigation-user .navigation-link {
   display: grid;
   align-items: center;
@@ -618,11 +659,14 @@ body {
 }
 
 .advantages-item-info {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   width: 400px;
   min-height: 384px;
-  padding: 92px 85px;
+  padding: 80px 85px;
   text-align: center;
 }
 
@@ -631,6 +675,7 @@ body {
 }
 
 .advantages-item-order {
+  margin-top: 0;
   margin-bottom: 30px;
 }
 
@@ -699,7 +744,7 @@ body {
 }
 
 .search-hotel .button {
-  margin-top: 56px;
+  margin: 56px 9px 0;
   padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
@@ -806,7 +851,7 @@ body {
 .catalog-filter-price-input {
   display: block;
   width: 100%;
-  padding: 13px 17.05px 12px;
+  padding: 12px 17.05px 11px;
   border: 2px solid #fff;
   border-radius: 4px;
   box-sizing: border-box;
@@ -866,9 +911,15 @@ body {
 }
 
 .catalog-filter-buttons .button-blue {
+  min-width: 160px;
   margin-bottom: 20px;
   padding: 14px 15px;
   border-radius: 4px;
+}
+
+.catalog-filter-buttons .button-transparent {
+  width: auto;
+  margin: 0 auto;
 }
 
 .housing-list {
@@ -992,4 +1043,34 @@ body {
 }
 .designer-copyrights:active {
   color: rgba(117, 97, 87, 0.3);;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 1;
+  background: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  margin: auto;
+  padding: 70px;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-closed {
+  display: none;
+}
+
+.modal .control-label {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000;
 }
