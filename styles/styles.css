@@ -102,6 +102,17 @@ body {
   font-weight: 400;
   background: none;
   text-transform: none;
+  color: #fff;
+}
+
+.button-transparent:focus {
+  outline: 3px solid #83B3D3;
+}
+.button-transparent:hover {
+  color: rgba(255,255,255,0.6);
+}
+.button-transparent:active {
+  color: rgba(255,255,255,0.3);
 }
 
 .form,
@@ -133,6 +144,56 @@ body {
   outline: 2px solid #000000;;
 }
 
+.control-checkbox,
+.control-radio {
+  position: relative;
+  display: block;
+  padding-left: 39.05px;
+}
+
+.control-checkbox-toogle,
+.control-radio-toogle {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-input[type="checkbox"]:focus + .control-checkbox-toogle {
+  background-color: rgba(255,255,255,0.6);
+  outline: 3px solid #83B3D3;
+}
+
+.control-checkbox:hover .control-checkbox-toogle {
+  background-color: rgba(255,255,255,0.6);
+}
+
+.control-checkbox:active .control-checkbox-toogle {
+  background-color: rgba(255,255,255,0.3);
+}
+
+
+.control-input[type="checkbox"]:checked + .control-checkbox-toogle {
+  background-image: url("../images/icons/checkbox.svg");
+}
+
+.control-radio-toogle {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-radio-toogle {
+  background-color: #3F5E72;
+  box-shadow: inset 0 0 0 5px #fff;
+}
+
+.control-input[type="radio"]:focus + .control-radio-toogle {
+  outline: 3px solid #83B3D3;
+}
+
 .control-select {
   padding: 12px 128px 12px 18px;
   border: 2px solid #E5E5E5;
@@ -140,6 +201,8 @@ body {
   align-self: center;
   color: #333333;
   cursor: pointer;
+  appearance: none;
+  background: url("../images/icons/control-select.svg") no-repeat right 18px center;
 }
 
 .control-select:focus,
@@ -156,6 +219,52 @@ body {
   border-color: rgba(0, 0, 0, 0.3);;
   color: rgba(0, 0, 0, 0.3);
 }
+
+.control-range-double {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.3);
+}
+
+.control-range-interval {
+  position: absolute;
+  height: 100%;
+  background-color: #fff;
+}
+
+.control-range-toogle {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background-color: #fff;
+  transform: translateY(-50%);
+}
+
+.control-range-toogle:last-child {
+  left: auto;
+  right: 0;
+}
+
+.control-range-toogle:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.control-range-toogle:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.control-range-toogle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+}
+
 
 .breadcrumbs,
 .breadcrumbs-item,
@@ -230,6 +339,7 @@ body {
   color: #fff;
   background: gray url("../images/filter-background.jpg");
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .inner-header .page-heading {
@@ -277,7 +387,7 @@ body {
   outline: none;
 }
 
-.button-view:hover
+.button-view:hover,
 .button-view:active,
 .button-view-current {
   border-color: #000;
@@ -634,19 +744,21 @@ body {
 }
 
 .catalog-filter-form {
-  display: grid;
-  grid-template-columns: repeat(3, max-content) 160px;
-  column-gap: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 70px);
 }
 
 .catalog-filter-group {
+  width: min-content;
   margin: 0;
+  margin-right: 70px;
   padding: 0;
   border: none;
 }
 
-.catalog-filter-group:nth-child(2n) {
-  margin-right: auto;
+.catalog-filter-group:nth-child(2n+1):not(:first-child) {
+  margin-left: auto;
 }
 
 .catalog-filter-list {
@@ -665,6 +777,82 @@ body {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.catalog-filter-price {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 287.81px;
+  align-self: start;
+}
+
+.catalog-filter-price .catalog-filter-title,
+.control-range-double {
+  grid-column: span 2;
+}
+
+.catalog-filter-price-field {
+  position: relative;
+}
+
+.catalog-filter-price-label {
+  position: absolute;
+  top: 50%;
+  right: 13.04px;
+  color: rgba(255,255,255,0.3);
+  transform: translateY(-50%);
+}
+
+.catalog-filter-price-input {
+  display: block;
+  width: 100%;
+  padding: 13px 17.05px 12px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: transparent;
+}
+
+.catalog-filter-price-field:nth-of-type(2n) {
+  margin-left: -2px;
+}
+
+.catalog-filter-price-field:nth-of-type(2n) .catalog-filter-price-input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.catalog-filter-price-field:nth-of-type(2n-1) .catalog-filter-price-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.catalog-filter-price-input:focus {
+  box-shadow: inset 0px 0px 0px 3px #81B3D2;
+  color: inherit;
+  background-color: transparent;
+}
+
+.catalog-filter-price-input:hover {
+  border-color: rgba(255,255,255,0.6);
+  color: inherit;
+  background-color: transparent;
+}
+
+.catalog-filter-price-input:active {
+  color: inherit;
+  background-color: #756257;
+}
+
+.catalog-filter-price-input::-webkit-outer-spin-button,
+.catalog-filter-price-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.catalog-filter-price .control-range-double {
+  margin-top: 30px;
 }
 
 .catalog-filter-buttons {
