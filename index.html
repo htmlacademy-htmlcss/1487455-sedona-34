@@ -191,43 +191,38 @@
         <label class="control-label" for="adults">Взрослые:</label>
         <div class="control-number">
           <button class="control-number-button control-number-button-minus" type="button">
+            <span class="visually-hidden">Уменьшить</span>
             <svg aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 0v1h13V0H0Z"/>
             </svg>
           </button>
           <input class="control-input control-number-input" type="number" name="adults" id="adults" value="2">
           <button class="control-number-button control-number-button-plus" type="button">
+            <span class="visually-hidden">Увеличить</span>
             <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
             </svg>
           </button>
         </div>
-        <label class="control-label align-right" for="children">
+        <label class="control-label tooltip-container align-right" for="children">
           <span>Дети:</span>
           <span class="tooltip">
             <button class="tooltip-toogle" type="button" aria-labelledby="tooltip-children">
-              <svg aria-hidden="true" focusable="false" width="1" height="9" viewBox="0 0 1 9" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#a)">
-                  <path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z"/>
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path d="M0 0h1v9H0z"/>
-                  </clipPath>
-                </defs>
-              </svg>
+              <span class="visually-hidden">Подсказка подробнее</span>
             </button>
             <span class="tooltip-text" role="tooltip" id="tooltip-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
           </span>
         </label>
         <div class="control-number">
           <button class="control-number-button control-number-button-minus" type="button">
+            <span class="visually-hidden">Уменьшить</span>
             <svg aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 0v1h13V0H0Z"/>
             </svg>
           </button>
           <input class="control-input control-number-input" type="number" name="children" id="children" value="1">
           <button class="control-number-button control-number-button-plus" type="button">
+            <span class="visually-hidden">Увеличить</span>
             <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
             </svg>
