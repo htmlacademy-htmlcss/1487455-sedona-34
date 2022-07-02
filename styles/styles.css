@@ -157,6 +157,7 @@ body {
 }
 
 .control-input {
+  margin: 0;
   border: 0;
   color: rgba(0, 0, 0, 0.6);
   background-color: #F2F2F2;
@@ -203,6 +204,7 @@ body {
 .control-number-input::-webkit-inner-spin-button,
 .control-number-input::-webkit-outer-spin-button {
   appearance: none;
+  margin: 0;
 }
 
 .control-number-button:focus,
