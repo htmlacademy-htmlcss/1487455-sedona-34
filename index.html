@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/modal.js"></script>
     <title>HTML Academy: Седона</title>
   </head>
   <body>
@@ -47,7 +48,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="button button-brown" href="#">Хочу сюда!</a>
+              <a class="button button-brown js-modal-open" href="#" data-modal="booking">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -174,63 +175,62 @@
       </footer>
     </div>
 
-    <div class="modal-overlay">
-      <form class="modal" action="https://echo.htmlacademy.ru/" method="post">
-        <h2 class="heading">Поиск гостиницы в Седоне</h2>
-        <button class="button button-close" type="button">
-          <span class="visually-hidden">Закрыть</span>
-          <svg class="button-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"/>
+    <div class="modal-overlay"></div>
+    <form class="modal" action="https://echo.htmlacademy.ru/" method="post" data-modal="booking">
+      <h2 class="heading">Поиск гостиницы в Седоне</h2>
+      <button class="button button-close js-modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <svg class="button-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"/>
+        </svg>
+      </button>
+      <label class="control-label" for="arrival">Дата Заезда:</label>
+      <input class="control-input" type="text" name="arrival" id="arrival" value="27 апреля 2020">
+      <p class="control-input-notification control-input-notification-error">Мы не можем отправить вас в прошлое.</p>
+      <label class="control-label" for="departure">Дата Выезда:</label>
+      <input class="control-input" type="text" name="departure" id="departure" value="1 сентября 2021">
+      <p class="control-input-notification">На эти даты есть свободные номера. Пока есть.</p>
+      <label class="control-label" for="adults">Взрослые:</label>
+      <div class="control-number">
+        <button class="control-number-button control-number-button-minus" type="button">
+          <span class="visually-hidden">Уменьшить</span>
+          <svg aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0v1h13V0H0Z"/>
           </svg>
         </button>
-        <label class="control-label" for="arrival">Дата Заезда:</label>
-        <input class="control-input" type="text" name="arrival" id="arrival" value="27 апреля 2020">
-        <p class="control-input-notification control-input-notification-error">Мы не можем отправить вас в прошлое.</p>
-        <label class="control-label" for="departure">Дата Выезда:</label>
-        <input class="control-input" type="text" name="departure" id="departure" value="1 сентября 2021">
-        <p class="control-input-notification">На эти даты есть свободные номера. Пока есть.</p>
-        <label class="control-label" for="adults">Взрослые:</label>
-        <div class="control-number">
-          <button class="control-number-button control-number-button-minus" type="button">
-            <span class="visually-hidden">Уменьшить</span>
-            <svg aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0v1h13V0H0Z"/>
-            </svg>
+        <input class="control-input control-number-input" type="number" name="adults" id="adults" value="2">
+        <button class="control-number-button control-number-button-plus" type="button">
+          <span class="visually-hidden">Увеличить</span>
+          <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="control-label tooltip-container align-right">
+        <label for="children">Дети:</label>
+        <span class="tooltip">
+          <button class="tooltip-toogle" type="button" aria-labelledby="tooltip-children">
+            <span class="visually-hidden">Подсказка подробнее</span>
           </button>
-          <input class="control-input control-number-input" type="number" name="adults" id="adults" value="2">
-          <button class="control-number-button control-number-button-plus" type="button">
-            <span class="visually-hidden">Увеличить</span>
-            <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
-            </svg>
-          </button>
-        </div>
-        <div class="control-label tooltip-container align-right">
-          <label for="children">Дети:</label>
-          <span class="tooltip">
-            <button class="tooltip-toogle" type="button" aria-labelledby="tooltip-children">
-              <span class="visually-hidden">Подсказка подробнее</span>
-            </button>
-            <span class="tooltip-text" role="tooltip" id="tooltip-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-          </span>
-        </div>
-        <div class="control-number">
-          <button class="control-number-button control-number-button-minus" type="button">
-            <span class="visually-hidden">Уменьшить</span>
-            <svg aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0v1h13V0H0Z"/>
-            </svg>
-          </button>
-          <input class="control-input control-number-input" type="number" name="children" id="children" value="1">
-          <button class="control-number-button control-number-button-plus" type="button">
-            <span class="visually-hidden">Увеличить</span>
-            <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
-            </svg>
-          </button>
-        </div>
-        <button class="button button-blue" type="submit">Найти</button>
-      </form>
-    </div>
+          <span class="tooltip-text" role="tooltip" id="tooltip-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+        </span>
+      </div>
+      <div class="control-number">
+        <button class="control-number-button control-number-button-minus" type="button">
+          <span class="visually-hidden">Уменьшить</span>
+          <svg aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0v1h13V0H0Z"/>
+          </svg>
+        </button>
+        <input class="control-input control-number-input" type="number" name="children" id="children" value="1">
+        <button class="control-number-button control-number-button-plus" type="button">
+          <span class="visually-hidden">Увеличить</span>
+          <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+          </svg>
+        </button>
+      </div>
+      <button class="button button-blue" type="submit">Найти</button>
+    </form>
   </body>
 </html>
