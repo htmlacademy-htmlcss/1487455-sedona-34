@@ -114,6 +114,7 @@ body {
 }
 .button-transparent:active {
   color: rgba(255,255,255,0.3);
+  outline: none;
 }
 
 .button-close {
@@ -207,6 +208,10 @@ body {
   margin: 0;
 }
 
+.control-number-button:hover {
+  cursor: pointer;
+}
+
 .control-number-button:focus,
 .control-number-button:hover
 .control-number-button:active {
@@ -234,11 +239,18 @@ body {
   box-shadow: inset 0 0 0 2px #000000;
 }
 
+.control-input:disabled,
+.control-number-button:disabled {
+  color: gray;
+  background-color: lightgray;
+}
+
 .control-checkbox,
 .control-radio {
   position: relative;
   display: block;
   padding-left: 39.05px;
+  min-height: 21px; /*иначе при недополнении схлопывается */
 }
 
 .control-checkbox-toogle,
@@ -282,6 +294,16 @@ body {
 
 .control-input[type="radio"]:focus + .control-radio-toogle {
   outline: 3px solid #83B3D3;
+}
+
+.control-radio .control-input:disabled ~ .control-radio-toogle,
+.control-checkbox .control-input:disabled ~ .control-checkbox-toogle {
+  background-color: lightgray;
+}
+
+.control-radio .control-input:disabled ~ .control-label,
+.control-checkbox .control-input:disabled ~ .control-label {
+  color: lightgray;
 }
 
 .control-select {
@@ -348,6 +370,7 @@ body {
 
 .control-range-toogle:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .control-range-toogle:active {
@@ -426,8 +449,8 @@ body {
 .inner-header {
   padding: 35px 70px 70px;
   color: #fff;
-  background: gray url("../images/filter-background.jpg");
-  background-size: cover;
+  background: darkcyan url("../images/filter-background.jpg");
+  background-size: 100% 100%;
   overflow-x: hidden;
 }
 
@@ -474,6 +497,7 @@ body {
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: center center;
+  flex-shrink: 0; /*иначе при переполнении соседних элементов сжимается */
 }
 
 .button-view:focus {
@@ -521,6 +545,19 @@ body {
   list-style-type: none;
 }
 
+.pagination-list:not(:empty) {
+  margin-bottom: -8px;
+}
+
+.pagination-item {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.pagination-item:last-child {
+  margin-right: 8px;
+}
+
 .pagination-link {
   display: block;
   box-sizing: border-box;
@@ -541,10 +578,6 @@ body {
 .pagination-link:hover {
   background-color: #68A2CA;
   outline: none;
-}
-
-.pagination-item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .pagination-link-current,
@@ -670,10 +703,11 @@ body {
   min-height: 485px;
   padding: 51px 0;
   box-sizing: border-box;
+  background-color: skyblue;
   background-image: url("../images/welcome-background-bottom.svg"),
                     url("../images/welcome-background.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: center 428px, center top;
+  background-position: center top 428px, center top;
   text-align: center;
 }
 
@@ -815,9 +849,8 @@ body {
 
 .newsletter-backgrounded {
   color: #fff;
-  background-image: url("../images/newsletter-background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background: darkcyan url("../images/newsletter-background.jpg") no-repeat center top;
+  background-size: 100% 100%;
 }
 
 .newsletter-backgrounded .newsletter-title {
@@ -930,7 +963,8 @@ body {
 }
 
 .catalog-filter-price-input:focus {
-  box-shadow: inset 0px 0px 0px 3px #81B3D2;
+  box-shadow: inset 0px 0px 0px 3px #81B3D2,
+                    0px 0px 0px 3px #81B3D2;
   color: inherit;
   background-color: transparent;
 }
@@ -944,6 +978,14 @@ body {
 .catalog-filter-price-input:active {
   color: inherit;
   background-color: #756257;
+  box-shadow: none;
+}
+
+.catalog-filter-price-input:disabled {
+  border-color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: none;
 }
 
 .catalog-filter-price-input::-webkit-outer-spin-button,
@@ -1013,6 +1055,7 @@ body {
 
 .housing-item .button,
 .housing-item-rating {
+  align-self: center;
   padding: 8px;
   padding-top: 9px;
   text-align: center;
@@ -1075,6 +1118,7 @@ body {
   line-height: 40px;
   color: #000;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .page-footer .phone:focus,
@@ -1183,6 +1227,7 @@ body {
 
 .align-right {
   justify-self: right;
+  padding-left: 18px;
 }
 
 .tooltip-container {
