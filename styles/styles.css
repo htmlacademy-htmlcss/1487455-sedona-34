@@ -1161,8 +1161,8 @@ body {
   display: grid;
   grid-template-columns: 155px min-content 1fr min-content;
   align-items: center;
-  width: 715px;
-  padding: 54px 70px 70px;
+  width: 716px;
+  padding: 54px 71px 71px 70px;
   border-radius: 30px;
   box-sizing: border-box;
   color: #000;
