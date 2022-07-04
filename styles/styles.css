@@ -634,6 +634,7 @@ body {
 .navigation-user {
   width: auto;
   margin-left: auto;
+  flex-shrink: 0;
 }
 
 .navigation-link {
