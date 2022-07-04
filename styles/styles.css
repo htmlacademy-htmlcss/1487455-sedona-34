@@ -164,6 +164,10 @@ body {
   background-color: #F2F2F2;
 }
 
+.control-input[type="number"] {
+  appearance: textfield;
+}
+
 .control-number {
   display: flex;
   border-radius: 4px;
